@@ -1,0 +1,17 @@
+FROM ruby:3.2-slim
+
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    nodejs \
+    npm \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+COPY Gemfile ./ 
+COPY jekyll-theme-yat.gemspec ./
+
+RUN gem install bundler && bundle install
+
+EXPOSE 4000
+CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0", "--watch", "--force_polling"]
