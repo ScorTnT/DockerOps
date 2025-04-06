@@ -13,5 +13,11 @@ COPY jekyll-theme-yat.gemspec ./
 
 RUN gem install bundler && bundle install
 
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh
+
 EXPOSE 4000
+
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+
 CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0", "--watch", "--force_polling"]

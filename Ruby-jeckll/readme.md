@@ -1,6 +1,6 @@
 # Docker build
 ```
-docker build -t jekyll-blog .
+docker build -t jekyll-blog -f .\Dockerfile {project-path}
 ```
 
 # Docker run
