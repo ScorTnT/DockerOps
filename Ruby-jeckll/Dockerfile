@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y \
     npm \
     && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /app
+WORKDIR /git.Blog
 
 COPY Gemfile ./ 
 COPY jekyll-theme-yat.gemspec ./
