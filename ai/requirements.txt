@@ -3,3 +3,6 @@ pandas
 numpy
 scikit-learn
 kaggle
+Pillow
+kagglehub
+matplotlib

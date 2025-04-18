@@ -5,7 +5,7 @@ WORKDIR /workspace
 
 # 시스템 패키지 설치
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends unzip vim && \
+    apt-get install -y --no-install-recommends unzip vim git && \
     rm -rf /var/lib/apt/lists/*
 
 # requirements.txt 복사 및 패키지 설치
