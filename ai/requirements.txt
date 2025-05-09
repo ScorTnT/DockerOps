@@ -6,3 +6,4 @@ kaggle
 Pillow
 kagglehub
 matplotlib
+nltk

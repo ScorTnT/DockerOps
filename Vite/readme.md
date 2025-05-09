@@ -3,7 +3,7 @@
 
 # docker build
 ```
-docker build -f . -t vite {project-path}
+docker build -f ~\Vite -t vite {project-path}
 ```
 
 # docker run
